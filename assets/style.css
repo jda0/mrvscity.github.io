@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: 0 0 1.5em 0;
     background-color: #000;
     font-family: System, Roboto, sans-serif;
     font-weight: 300;
@@ -19,6 +19,7 @@ a:visited {
 
 h1 {
     margin: 0;
+    padding: 0 0.33333333em;
     font-weight: 100;
     font-size: 3em;
     line-height: 1em;
@@ -28,6 +29,7 @@ h1 {
 
 h2 {
     margin: 0.5em auto 1em auto;
+    padding: 0 0.57142857em;
     font-weight: 300;
     font-size: 1.75em;
     line-height: 1em;
@@ -40,6 +42,7 @@ p {
     text-align: justify;
     line-height: 1.5em;
     margin: 0 auto 1.5em auto;
+    padding: 0 1em;
     max-width: 28em;
 }
 
