@@ -1,0 +1,219 @@
+- div: 2018
+
+- title: Hedgehog Bot
+  url: jda0/arduino-hedgehog-bot
+  lang: arduino
+  desc: An Introduction to IoT & Robotics
+  svg: hedgehog-bot
+  tag:
+    type: git-pull-request
+    title: MVSE-Outreach
+    url: mvse-outreach/arduino-hedgehog-bot
+  lastcommit: 18/4/18
+
+- title: Donsol
+  url: hundredrabbits/donsol
+  lang: js
+  desc: A Card Game designed by John Eternal
+  svg: donsol-mark
+  tag:
+    type: git-merge
+    title: hundredrabbits/donsol
+    url: hundredrabbits/donsol
+  lastcommit: 17/4/18
+
+- title: Animator
+  url: jda0/comp4411-4
+  lang: cpp
+  desc: 3D Spline-Based Animation System
+  private: true
+  lastcommit: 17/4/18
+
+- title: Trace
+  url: jda0/comp4411-3
+  lang: cpp
+  desc: A 3D Ray-Tracing Renderer
+  private: true
+  lastcommit: 5/4/18
+
+- title: Riven
+  url: jda0/riven2
+  lang: js
+  desc: A Flow-Mapping Tool
+  svg: riven-mark
+  lastcommit: 16/3/18
+
+- title: Modeller
+  url: jda0/comp4411-2
+  lang: cpp
+  desc: A 3D OpenGL Renderer
+  private: true
+  lastcommit: 14/3/18
+
+- title: Tech Club
+  url: hkusttechclub/hkusttechclub.github.io
+  lang: js
+  desc: HKUST Tech Club
+  svg: ust-tech
+  tag:
+    type: git-merge
+    title: hkusttechclub/hkusttechclub.github.io
+    url: hkusttechclub/hkusttechclub.github.io
+  lastcommit: 4/3/18
+
+- title: Hedgehog Clock
+  url: jda0/hedgehogclock
+  lang: cpp
+  desc: NTP Project for Hedgehog Bot
+  svg: hedgehog-clock
+  tag:
+    type: organization
+    title: MVSE-Outreach
+    url: mvse-outreach
+  lastcommit: 2/3/18
+
+- title: Impressionist
+  url: jda0/comp4411-1
+  lang: cpp
+  desc: An Impressionist Painting Program
+  private: true
+  lastcommit: 22/2/18
+
+- title: Cactus
+  url: jda0/cactus
+  lang: css
+  desc: An Opinionated SCSS Framework
+  lastcommit: 5/2/18
+
+- div: 2017
+
+- title: Canaries
+  url: jda0/comp3632-1
+  lang: cpp
+  desc: Buffer Overflow Implementations
+  private: true
+  lastcommit: 24/12/17
+
+- title: Score
+  url: jda0/score
+  lang: js
+  desc: Messenger Bot for Competition Management
+  svg: score-wordmark
+  lastcommit: 24/12/17
+
+- title: Convolutional Networks
+  url: jda0/comp4901j-2
+  lang: py
+  desc: Fully-Connected Neural Networks for Vision
+  svg: tensorflow-wordmark
+  lastcommit: 24/12/17
+
+- title: K-Anonymitity
+  url: jda0/comp3632-kanon
+  lang: py
+  desc: Implementation of K-Anonymity
+  lastcommit: 29/11/17
+
+- title: Style Transfer
+  url: jda0/comp4901j-3
+  lang: py
+  desc: GANs, Captioning and Style Transfer with Neural Networks
+  svg: tensorflow-wordmark
+  lastcommit: 15/11/17
+
+- title: Project Martini
+  url: jda0/qbranch-martini
+  lang: js
+  desc: Smart Heating for Enterprise
+  svg: martini-mark
+  private: true
+  tag:
+    type: organization
+    title: Q Branch
+    url: rubenwardy
+  lastcommit: 8/5/17
+
+- title: Project Gin
+  url: jda0/qbranch-martini-app
+  lang: js
+  desc: React Native app for Project Martini
+  svg: martini-mark
+  private: true
+  lastcommit: 3/5/17
+
+- div: 2015
+
+- title: Yatzi
+  url: jda0/yatzi
+  lang: js
+  desc: Dice Game for Mobile/Web
+  svg: yatzi-mark
+  lastcommit: 9/9/15
+
+- title: Flyt (SQL)
+  url: jda0/flyt-sqlite
+  lang: coffee
+  desc: Behaviour and competition tracking for schools and youth groups
+  svg: flyt-mark
+  lastcommit: 14/5/15
+
+- title: NCO
+  url: jda0/nco-1
+  lang: js
+  desc: Meteor-based competition and behaviour tracking for schools and youth groups
+  svg: nco-logo
+  lastcommit: 17/3/15
+
+- title: Editor
+  url: jda0/toy-editor
+  lang: js
+  desc: Minimalist Markdown Editor
+  svg: write-wordmark
+  lastcommit: 26/2/15
+
+- title: Explorer
+  url: jda0/farkle
+  lang: coffee
+  desc: Puzzle Game
+  svg: explorer-mark
+  lastcommit: 24/2/15
+
+- title: Farkle
+  url: jda0/farkle
+  lang: coffee
+  desc: Multiplayer Dice Game
+  svg: farkle-mark
+  lastcommit: 23/1/15
+
+- title: NCO for Slack
+  url: jda0/supernco
+  lang: coffee
+  desc: Archived slackbot
+  svg: slack-mark
+  lastcommit: 27/8/15
+
+- div: Archived
+
+- title: NCO for Slack
+  url: jda0/nco-3
+  lang: coffee
+  desc: Archived slackbot backend
+  archived: true
+  svg: slack-mark
+  lastcommit: 27/8/15
+
+- title: Flyt (Redis)
+  url: jda0/flyt-redis
+  lang: coffee
+  desc: Behaviour and competition tracking for schools and youth groups
+  archived: true
+  svg: flyt-mark
+  lastcommit: 27/7/15
+
+- title: NCO 2
+  url: jda0/nco-2
+  lang: coffee
+  desc: Archived youth group management tool
+  svg: nco-logo
+  archived: true
+  lastcommit: 7/5/15

@@ -1,0 +1,20 @@
+langs:
+  arduino: Arduino
+  coffee: CoffeeScript
+  cpp: C++
+  css: CSS
+  js: JavaScript
+  py: Python
+
+tags:
+  organization: Organisation
+  git-merge: Merged PR
+  git-pull-request: Pull Request
+  git-branch: Branch
+
+long:
+  tags:
+    organization: Organisation
+    git-merge: Merged into
+    git-pull-request: Pull Request made to
+    git-branch: Branched from
