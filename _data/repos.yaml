@@ -195,6 +195,13 @@
 
 - div: Archived
 
+- title: Game of Life
+  url: jda0/coms20001-gol2
+  lang: xc
+  desc: Parallelised Conway's Game of Life
+  archived: true
+  svg: 
+
 - title: NCO for Slack
   url: jda0/nco-3
   lang: coffee

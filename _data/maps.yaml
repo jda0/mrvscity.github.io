@@ -5,6 +5,7 @@ langs:
   css: CSS
   js: JavaScript
   py: Python
+  xc: XC
 
 tags:
   organization: Organisation

@@ -259,6 +259,8 @@ a > .cards, .cards a {
 .cards .card-js .card-lang { color: #d7c112; fill: #d7c112; }
 .cards .card-py .card-image { background-color: #f2f7fb; color: #99bfde; fill: #99bfde; }
 .cards .card-py .card-lang { color: #3572a5; fill: #3572a5; }
+.cards .card-xc .card-image { background-color: #f8fced; color: #d5f38f; fill: #d8fb88; }
+.cards .card-xc .card-lang { color: #99da07; fill: #99da07; }
 
 @media screen and (min-width: 960px) {
   section > .half,
