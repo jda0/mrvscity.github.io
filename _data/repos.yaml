@@ -200,7 +200,8 @@
   lang: xc
   desc: Parallelised Conway's Game of Life
   archived: true
-  svg: 
+  svg: gol-mark
+  lastcommit: 12/16
 
 - title: NCO for Slack
   url: jda0/nco-3
