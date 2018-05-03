@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   line-height: 1.25em;
+  -webkit-overflow-scrolling: touch;
 }
 
 html, body {
@@ -135,9 +136,23 @@ a > .cards, .cards a {
   justify-content: space-between;
 }
 
-.header-row select {
+select {
   padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  padding-right: 1.625rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 3px;
+  background: url(assets/select-icon.svg) right 0.625em / 1.5em no-repeat white;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05), 0 8px 32px rgba(0,0,0,.20);
+}
+
+select::-ms-expand { 
+  display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+.header-row select {
   height: 2.25rem;
 }
 
@@ -148,7 +163,6 @@ a > .cards, .cards a {
   list-style-position: inside;
   padding: 0;
   background: white;
-  -webkit-overflow-scrolling: touch;
 }
 
 .cards > li,
@@ -283,4 +297,12 @@ a > .cards, .cards a {
     display: block;
     width: 50%;
   }
+}
+
+@media screen and (min-width:0\0) {
+  select {
+    background:none\9;
+    padding: 5px\9;
+    padding: 5px 0.625rem;
+  } 
 }
