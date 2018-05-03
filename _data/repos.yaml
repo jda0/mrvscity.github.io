@@ -109,7 +109,7 @@
   svg: tensorflow-wordmark
   lastcommit: 12/17
 
-- title: K-Anonymitity
+- title: K-Anonymity
   url: jda0/comp3632-kanon
   lang: py
   desc: Implementation of K-Anonymity
