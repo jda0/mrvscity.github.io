@@ -46,7 +46,6 @@ for (let root of document.querySelectorAll('[data-scroll-x="1"]')) {
   pseudos[0].style.paddingLeft = '9999px'
   pseudos[0].style.marginLeft = '-9999px'
   pseudos[0].style.paddingRight = '9999px'
-  document.body.style.overflowX = 'hidden'
 
   // const fakeChild = document.createElement('div')
   // fakeChild.innerHTML = '&nbsp;'
@@ -73,11 +72,10 @@ for (let root of document.querySelectorAll('[data-scroll-x="1"]')) {
 if (scrolljack) {
   let scrolljackCallback = (prop, threshold, inv = 1, mul = 1) => e => {
     for (const t of scrolljack) {
-      console.log(
-        [e.pageY >= t.offsetTop, e.pageY <= t.offsetTop + t.offsetHeight],
-        [e[prop] * inv <= -threshold * inv, t.scrollLeft + t.offsetWidth < t.scrollWidth],
-        [e[prop] * inv >= threshold * inv, t.scrollLeft > 0])
-      if (e.pageY >= t.offsetTop && e.pageY <= t.offsetTop + t.offsetHeight) {
+      let offsetTop = t.offsetTop
+      for (let el = t.offsetParent; el !== document.body; el = el.offsetParent) offsetTop += el.offsetTop
+
+      if (e.pageY >= offsetTop && e.pageY <= offsetTop + t.offsetHeight) {
         if (e[prop] * inv <= -threshold * inv && t.scrollLeft + t.offsetWidth < t.scrollWidth) {
           t.scrollBy(-e[prop] * inv * mul, 0)
           e.preventDefault()
