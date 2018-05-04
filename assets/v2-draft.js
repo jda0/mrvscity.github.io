@@ -64,9 +64,11 @@ for (let root of document.querySelectorAll('[data-scroll-x="1"]')) {
   root.innerHTML = ''
   root.style.display = 'block'
   root.appendChild(pseudos[0])
-  root.appendChild(pseudos[1])
 
-  scrolljack = [pseudos[1]]
+  if (navigator.userAgent.toLowerCase().indexOf('android') === -1) {
+    root.appendChild(pseudos[1])
+    scrolljack = [pseudos[1]]
+  }
 }
 
 if (scrolljack) {
