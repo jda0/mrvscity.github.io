@@ -154,7 +154,7 @@ select {
   appearance: none;
   border: none;
   border-radius: 3px;
-  background: url(select-icon.svg) right 0.625em / 1.5em no-repeat white;
+  background: url(select-icon.svg) right 0.416666em center / 1.5em no-repeat white;
   box-shadow: 0 2px 6px rgba(0,0,0,.05), 0 8px 32px rgba(0,0,0,.20);
 }
 
