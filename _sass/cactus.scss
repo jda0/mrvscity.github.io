@@ -162,12 +162,12 @@ $font-weight: 400;
   }
 
   p + * {
-    margin-top: pow($ratio, 1) * 1em
+    margin-top: pow($ratio, 1) * 1em;
+    padding-top: size(2, 0.5);
   }
 
   * + p {
-    // margin-top: pow($ratio, -1) * 1em;
-    padding-top: size(2, 0.5);
+    margin-top: pow($ratio, -1) * 1em;
   }
 
   h1 + p,
@@ -255,7 +255,7 @@ $font-weight: 400;
       padding: size(2, 0.5) size(1, 1.5);
     }
 
-    * + p {
+    p + * {
       padding-top: size(2, 0.5);
     }
 
@@ -284,8 +284,7 @@ $font-weight: 400;
       padding: size(2, 0.5) size(1, 0.5);
     }
 
-
-    * + p {
+    p + * {
       padding-top: size(2, 0.5);
     }
 
@@ -312,7 +311,7 @@ $font-weight: 400;
       padding: size(2, 0.5) size(2, 0.5);
     }
 
-    * + p {
+    p + * {
       padding-top: size(2, 0.5);
     }
 
