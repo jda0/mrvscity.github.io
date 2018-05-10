@@ -32,6 +32,15 @@ document.addEventListener('scroll', (e) => {
   leaf.style.marginBottom = -offset + 'px'
 })
 
+/* COLORIFY */
+let last = Math.floor(Math.random() * 360)
+for (let el of document.querySelectorAll('[data-colorify="1"]')) {
+  const deg = Math.floor(Math.random() * 180)
+  const h1 = last += 60 + Math.floor(Math.random() * 180)
+  const h2 = h1 + 30 + Math.floor(Math.random() * 60)
+  el.style.background = `linear-gradient(${deg}deg, hsl(${h1},90%,95%), hsl(${h2},90%,95%))`
+}
+
 /* HORIZONTAL SCROLL */
 let scrolljack = []
 for (let root of document.querySelectorAll('[data-scroll-x="1"]')) {
@@ -52,7 +61,7 @@ for (let root of document.querySelectorAll('[data-scroll-x="1"]')) {
   // fakeChild.style.width = root.scrollWidth + 'px'
   // fakeChild.style.height = root.scrollHeight + 'px'
   // pseudos[1].style.display = 'block'
-  pseudos[1].style.overflowX = 'scroll'
+  pseudos[1].style.overflowX = 'auto'
   // pseudos[1].appendChild(fakeChild)
   pseudos[1].addEventListener('scroll', (e) => {
     pseudos[0].style.marginLeft = (-9999 - pseudos[1].scrollLeft) + 'px'

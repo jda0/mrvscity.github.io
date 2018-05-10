@@ -1,0 +1,24 @@
+defaults:
+  - 
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      author: "James Daly"
+
+title: James in Space
+author: James Daly
+email: hello@jamesin.space
+description: >
+  James Daly's Mission Control
+
+twitter_username: jda0_
+github_username: jda0
+facebook_username: 0jda0
+instagram_username: jda0
+linkedin_username: james-d-65b0a087
+disqus:
+  shortname: jda0
+
+permalink: :categories/:short_year:month/:title

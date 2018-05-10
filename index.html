@@ -5,6 +5,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>James in Space</title>
     <meta name="description" content="James Daly's Mission Control"> 
@@ -59,6 +60,29 @@
         <dd><a href="assets/cv1801.pdf">Download (PDF)</a></dd>
       </dl>
     </section>
+  {%- if site.posts.size > 0 -%}
+    <div class="no-x-overflow">
+      <section id="posts">
+        <div class="header-row">
+          <h2>Posts</h2>
+        </div>
+        <ul class="cards" data-scroll-x="1">
+          {% for post in site.posts %}
+            <li class="card-post" data-tags="{{repo.tag.type}}" data-langs="{{repo.lang}}">
+              <a href="{{ post.url | relative_url }}">
+                <div class="card-inline" data-colorify="1">
+                  <div class="card-title">{{ post.title | escape }}</div>
+                  <div class="card-date">
+                    {{ post.date | date: '%e %B %Y'}}
+                  </div>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
+  {%- endif -%}
     <div class="no-x-overflow">
       <section data-filterable="1" id="repos">
         <div class="header-row">

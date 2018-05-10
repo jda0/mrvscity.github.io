@@ -1,4 +1,60 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
+@font-face {
+  font-family: "HK Grotesk";
+  font-weight: 400;
+  font-style: normal;
+  src: url("fonts/HKGrotesk-Regular.woff2") format("woff2"),
+       url("fonts/HKGrotesk-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "HK Grotesk";
+  font-weight: 400;
+  font-style: italic;
+  src: url("fonts/HKGrotesk-Italic.woff2") format("woff2"),
+       url("fonts/HKGrotesk-Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "HK Grotesk";
+  font-weight: 500;
+  font-style: normal;
+  src: url("fonts/HKGrotesk-Medium.woff2") format("woff2"),
+       url("fonts/HKGrotesk-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "HK Grotesk";
+  font-weight: 500;
+  font-style: italic;
+  src: url("fonts/HKGrotesk-MediumItalic.woff2") format("woff2"),
+       url("fonts/HKGrotesk-MediumItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "HK Grotesk";
+  font-weight: 600;
+  font-style: normal;
+  src: url("fonts/HKGrotesk-SemiBold.woff2") format("woff2"),
+       url("fonts/HKGrotesk-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "HK Grotesk";
+  font-weight: 600;
+  font-style: italic;
+  src: url("fonts/HKGrotesk-SemiBoldItalic.woff2") format("woff2"),
+       url("fonts/HKGrotesk-SemiBoldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "HK Grotesk";
+  font-weight: 700;
+  font-style: normal;
+  src: url("fonts/HKGrotesk-Bold.woff2") format("woff2"),
+       url("fonts/HKGrotesk-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "HK Grotesk";
+  font-weight: 700;
+  font-style: italic;
+  src: url("fonts/HKGrotesk-BoldItalic.woff2") format("woff2"),
+       url("fonts/HKGrotesk-BoldItalic.woff") format("woff");
+}
 
 * {
   box-sizing: border-box;
@@ -16,7 +72,7 @@ body {
 }
 
 body, select {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'HK Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #4a4a4a;
 }
 
@@ -193,19 +249,39 @@ select::-ms-expand {
   width: 14.375rem;
 }
 
-.cards .card-image {
+.cards .card-image,
+.cards .card-inline {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   align-content: center;
-  justify-content: center;
   width: 100%;
-  height: 8rem;
   background-color: #f4f4f4;
-  color: #c3c3c3;
-  fill: #c3c3c3;
   margin-bottom: 1.25rem;
   border-radius: 3px;
   overflow: hidden;
+}
+
+.cards .card-image {
+  color: #c3c3c3;
+  fill: #c3c3c3;
+  height: 8rem;
+}
+
+.cards .card-inline {
+  height: 100%;
+  padding: 0.625rem 1.25rem;
+  text-align: center;
+}
+
+.cards .card-inline .card-title {
+  font-weight: bolder;
+  margin-right: 0;
+}
+
+.cards .card-inline .card-date {
+  opacity: 0.625;
 }
 
 .cards .card-headline {
@@ -260,7 +336,8 @@ select::-ms-expand {
   margin-top: -0.125em;
 }
 
-.cards .card-list .card-image {
+.cards .card-list .card-image,
+.cards .card-list .card-inline {
   background-color: inherit;
 }
 
@@ -282,9 +359,11 @@ select::-ms-expand {
   margin-top: -0.125em;
 }
 
-.cards .card-div .card-image { background-color: inherit; justify-content: flex-end; padding-right: 0.625rem; font-size: 1.25rem; }
+.cards .card-div .card-image,
+.cards .card-div .card-inline { background-color: inherit; justify-content: flex-end; padding-right: 0.625rem; font-size: 1.25rem; }
 .cards:not([data-scroll-x="1"]) .card-div { flex-basis: 100%; }
-.cards:not([data-scroll-x="1"]) .card-div .card-image { justify-content: flex-start; height: auto; margin-top: 1.25rem; margin-bottom: 0; }
+.cards:not([data-scroll-x="1"]) .card-div .card-image,
+.cards:not([data-scroll-x="1"]) .card-div .card-inline { justify-content: flex-start; height: auto; margin-top: 1.25rem; margin-bottom: 0; }
 
 .cards .card-arduino .card-image { background-color: #f7eef9; color: #d3a5e0; fill: #d3a5e0; }
 .cards .card-arduino .card-lang { color: #943bad; fill: #943bad; }

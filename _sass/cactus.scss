@@ -1,0 +1,345 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+$base:        "1vw + 19.2px";
+$ratio:       1.6;
+$font-backup: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-body:   'HK Grotesk', $font-backup;
+$font-title:  'HK Grotesk', $font-backup;
+$font-weight: 400;
+
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  } @else if $exponent < 0 {
+    @for $i from 1 through -$exponent {
+      $value: $value / $number;
+    }
+  }
+
+  @return $value;
+}
+
+@function size($n, $multiple:1) {
+  @return calc(#{$multiple} * (#{$base}) * #{pow($ratio, $n)});
+}
+
+.cactus {
+  font-family: $font-body;
+  font-size: size(0);
+  font-weight: $font-weight;
+  line-height: $ratio;
+  padding-top: size(1, 1);
+  padding-bottom: size(1, 2);
+  overflow-wrap: break-word;
+
+  a,
+  a:visited {
+    color: #e74c3c;
+    text-decoration: none;
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+  
+  a:after,
+  abbr:after {
+    content: '˚';
+    opacity: pow($ratio, -1);
+  }
+
+  button,
+  input,
+  textarea {
+    box-sizing: border-box;
+    position: relative;
+    text-align: baseline;
+    font-family: inherit;
+    padding: 0.25em * pow($ratio, 2) - 0.25em;
+    padding-bottom: 0.25em * pow($ratio, 2) - 0.375em;
+    border: 2px solid #ecf0f1;
+    width: 100%;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button {
+    cursor: pointer;
+    background: #ecf0f1;
+  }
+
+  // a.button {
+  //   position: relative;
+  //   background-color: #e74c3c;
+  //   color: #fff;
+  //   text-transform: uppercase;
+  //   border-radius: 0.25em;
+  //   white-space: nowrap;
+  //   border: none;
+  //   font-size: pow($ratio, -1) * 1em;
+  //   padding: 0.5em * pow($ratio, 2) - 0.5em;
+  //   padding-bottom: 0.5em * pow($ratio, 2) - 0.75em;
+  //   margin-left: 0.25em;
+  //   margin-right: 0.25em;
+  //   top: $ratio * 0.5em - 1em;
+  //   line-height: 0;
+  //   height: 0;
+  // }
+
+  // a.button:after {
+  //   content: ''
+  // }
+
+  &.dev {
+    background: #f4f4f4;
+    background-clip: padding-box;
+  }
+
+  &.dev * {
+    background-image: linear-gradient(#ffeded, #ffeded), linear-gradient(#ffffe4, #ffffe4);
+    background-clip: content-box, padding-box;
+    border: 1px solid #dbffdb;
+  }
+
+  .c {
+    text-align: center;
+  }
+
+  .vbig,
+  .big,
+  big {
+    font-size: $ratio * 1em;
+    font-weight: $font-weight - 100;
+  }
+
+  .vbig,
+  h1,
+  h2 {
+    font-size: pow($ratio, 2) * 1em;
+  }
+
+  h1,
+  h2 {
+    font-family: $font-title;
+    font-weight: $font-weight;
+    // font-weight: 600;
+  }
+
+  .small,
+  small,
+  h3 {
+    font-size: pow($ratio, -1) * 1em;
+  }
+
+  h3,
+  button,
+  a.button {
+    font-weight: $font-weight + 200;
+  }
+
+  h4 {
+    font-size: 1em;
+    font-weight: inherit;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    margin: 0;
+  }
+
+  p {
+    widows: 3;
+    orphans: 3;
+  }
+
+  p + * {
+    margin-top: pow($ratio, 1) * 1em
+  }
+
+  * + p {
+    // margin-top: pow($ratio, -1) * 1em;
+    padding-top: size(2, 0.5);
+  }
+
+  h1 + p,
+  h2 + p,
+  h3 + p,
+  h4 + p {
+    margin-top: pow($ratio, -2) * 1em;
+  }
+
+  button.t {
+    background: transparent;
+    border: none;
+    color: #e74c3c;
+  }
+
+  button.t:after {
+    content: '˚';
+    opacity: pow($ratio, -1);
+  }
+
+  .fade {
+    opacity: pow($ratio, -1);
+  }
+
+  & > :not(.nop) {
+    padding: size(2, 0.5) size(1);
+  }
+
+  .grid {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: size(2, 0.5) size(1, 0.5);
+  }
+
+  .grid > * {
+    width: 100%;
+    box-sizing: border-box;
+    padding: size(2, 0.5) size(1, 0.5);
+  }
+
+  .grid.fp {
+    box-sizing: border-box;
+    min-height: 100vh;
+    align-items: center;
+  }
+  
+  .grid.fp.vs {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .zh {
+    line-height: 1;
+  }
+
+  .grid > .grid {
+    padding: 0;
+  }
+
+  .grid > .u1  { width:  8.333333% }
+  .grid > .u2  { width: 16.666667% }
+  .grid > .u3  { width: 25% }
+  .grid > .u4  { width: 33.333333% }
+  .grid > .u5  { width: 41.666667% }
+  .grid > .u6,
+  .grid > .s1  { width: 50% }
+  .grid > .u7  { width: 58.333333% }
+  .grid > .u8  { width: 66.666667% }
+  .grid > .u9  { width: 75% }
+  .grid > .u10 { width: 83.333333% }
+  .grid > .u11 { width: 91.666667% }
+
+  @media screen and (min-width: 720px) {
+    padding-top: size(1, 2);
+    padding-bottom: size(1, 3);
+
+    & > :not(.nop) {
+      padding: size(2, 0.5) size(1, 3);
+    }
+
+    .grid,
+    .grid > * {
+      padding: size(2, 0.5) size(1, 1.5);
+    }
+
+    * + p {
+      padding-top: size(2, 0.5);
+    }
+
+    .grid.ngp > * {
+      padding: size(2, 0.5) size(1, 0.5);
+    }
+    
+    .grid > .a  { width: auto; }
+    .grid > .m1 { width: 16.666667% }
+    .grid > .m2 { width: 33.333333% }
+    .grid > .m3 { width: 50% }
+    .grid > .m4 { width: 66.666667% }
+    .grid > .m5 { width: 83.333333% }
+  }
+
+  @media screen and (min-width: 1120px) {
+    padding-top: size(2, 2);
+    padding-bottom: size(2, 3);
+
+    & > :not(.nop) {
+      padding: size(2, 0.5) size(1);
+    }
+
+    .grid,
+    .grid > * {
+      padding: size(2, 0.5) size(1, 0.5);
+    }
+
+
+    * + p {
+      padding-top: size(2, 0.5);
+    }
+
+    .grid > .l1  { width:  8.333333% }
+    .grid > .l2  { width: 16.666667% }
+    .grid > .l3  { width: 25% }
+    .grid > .l4  { width: 33.333333% }
+    .grid > .l5  { width: 41.666667% }
+    .grid > .l6  { width: 50% }
+    .grid > .l7  { width: 58.333333% }
+    .grid > .l8  { width: 66.666667% }
+    .grid > .l9  { width: 75% }
+    .grid > .l10 { width: 83.333333% }
+    .grid > .l11 { width: 91.666667% }
+  }
+
+  @media screen and (min-width: 1760px) {
+    & > :not(.nop) {
+      padding: size(2, 0.5) size(2);
+    }
+
+    .grid,
+    .grid > * {
+      padding: size(2, 0.5) size(2, 0.5);
+    }
+
+    * + p {
+      padding-top: size(2, 0.5);
+    }
+
+    .grid.ngp > * {
+      padding: size(2, 0.5) size(1, 0.5);
+    }
+  }
+
+  canvas,
+  img,
+  video {
+    width: auto;
+    max-width: 100%;
+    padding: 0 !important;
+  }
+  
+  .hug, 
+  &.hug { 
+    padding-top: 0; 
+  }
+
+  .hug-bottom, 
+  &.hug-bottom {
+    padding-bottom: 0; 
+  }
+  .spoon, &.spoon {
+    padding-top: 0;
+    padding-bottom: 0; 
+  }
+}
