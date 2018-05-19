@@ -1,0 +1,43 @@
+- name: 'webring'
+  url: 'http://webring.xxiivv.com/'
+  class: 'webring'
+  svg: 'webring-mark'
+
+- name: 'instagram'
+  username: 'jda0'
+  url: '//instagram.com/jda0'
+  svg: 'instagram-mark'
+  color1: 333
+  color2: 44
+
+- name: 'messenger'
+  username: '0jda0'
+  url: '//m.me/0jda0'
+  svg: 'messenger-mark'
+  color1: 209
+
+- name: 'twitter'
+  username: 'jda0_'
+  url: '//twitter.com/jda0_'
+  svg: 'twitter-mark'
+  color1: 203
+  color2: 65
+
+- name: 'linkedin'
+  username: 0jda0
+  url: '//linkedin.com/in/0jda0'
+  svg: 'linkedin-logo'
+  color1: 201
+
+- name: 'spotify'
+  username: 'jda0'
+  url: '//open.spotify.com/user/jda0'
+  svg: 'spotify-mark'
+  color1: 141
+  color2: 57
+
+- name: 'reddit'
+  username: 'u/jda0'
+  url: '//reddit.com/user/jda0/posts'
+  svg: 'reddit-mark'
+  color1: 16

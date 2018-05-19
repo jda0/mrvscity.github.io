@@ -25,7 +25,17 @@
     <meta property="fb:admins" content="1651596250" /> 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{"/apple-touch-icon.png" | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{"/favicon-32x32.png" | relative_url }}">
+    <link rel="icon" type="image/png" sizes="194x194" href="{{"/favicon-194x194.png" | relative_url }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{"/android-chrome-192x192.png" | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{"/favicon-16x16.png" | relative_url }}">
+    <link rel="manifest" href="{{"/site.webmanifest" | relative_url }}">
+    <link rel="mask-icon" href="{{"/safari-pinned-tab.svg" | relative_url }}" color="#0366d6">
+    
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body>
     <main class="cactus">
@@ -65,5 +75,22 @@
         </div>
       </div>
     </main>
+
+    <noscript id="deferred-styles">
+      <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
   </body>
 </html>

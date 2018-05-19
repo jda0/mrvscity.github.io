@@ -35,9 +35,19 @@ document.addEventListener('scroll', (e) => {
 /* COLORIFY */
 let last = Math.floor(Math.random() * 360)
 for (let el of document.querySelectorAll('[data-colorify="1"]')) {
+  let start = el.getAttribute('data-colorify-h1')
+
   const deg = Math.floor(Math.random() * 180)
-  const h1 = last += 60 + Math.floor(Math.random() * 180)
-  const h2 = h1 + 30 + Math.floor(Math.random() * 60)
+
+  let h1_ = parseInt(el.getAttribute('data-colorify-h1'))
+  let h2 = parseInt(el.getAttribute('data-colorify-h2'))
+  let h1 = h1_ || (last += 60 + Math.floor(Math.random() * 180))
+
+  if (!h2) {
+    let dh = 30 + Math.floor(Math.random() * 60)
+    if (h1_ && Math.random() > 0.5) dh *= -1
+    h2 = h1 + dh
+  }
   el.style.background = `linear-gradient(${deg}deg, hsl(${h1},90%,95%), hsl(${h2},90%,95%))`
 }
 
@@ -72,11 +82,26 @@ for (let root of document.querySelectorAll('[data-scroll-x="1"]')) {
 
   root.innerHTML = ''
   root.style.display = 'block'
-  root.appendChild(pseudos[0])
+
+  let p = pseudos[0]
+  if (pseudos[0] instanceof HTMLUListElement) {
+    p = document.createElement('li')
+    p.setAttribute('class', 'pseudo')
+    p.setAttribute('aria-hidden', true)
+    p.appendChild(pseudos[0])
+    for (const el of pseudos[0].querySelectorAll(['input', 'select', 'a[href]', 'textarea', 'button', '[tabindex]'])) el.tabIndex = -1
+  }
+  root.appendChild(p)
 
   if (navigator.userAgent.toLowerCase().indexOf('android') === -1) {
-    root.appendChild(pseudos[1])
-    scrolljack = [pseudos[1]]
+    let p = pseudos[1]
+    if (pseudos[1] instanceof HTMLUListElement) {
+      p = document.createElement('li')
+      p.setAttribute('class', 'pseudo')
+      p.appendChild(pseudos[1])
+    }
+    root.appendChild(p)
+    scrolljack.push(pseudos[1])
   }
 }
 
@@ -126,6 +151,7 @@ if (filterRoot && window.data && ('selectedOptions' in sel)) {
     }
     sel.appendChild(group)
   }
+  sel.setAttribute('aria-label', 'Filter')
   header.appendChild(sel)
 
   sel.addEventListener('change', e => {
