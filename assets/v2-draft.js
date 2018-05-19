@@ -35,8 +35,6 @@ document.addEventListener('scroll', (e) => {
 /* COLORIFY */
 let last = Math.floor(Math.random() * 360)
 for (let el of document.querySelectorAll('[data-colorify="1"]')) {
-  let start = el.getAttribute('data-colorify-h1')
-
   const deg = Math.floor(Math.random() * 180)
 
   let h1_ = parseInt(el.getAttribute('data-colorify-h1'))
@@ -55,8 +53,7 @@ for (let el of document.querySelectorAll('[data-colorify="1"]')) {
 let scrolljack = []
 for (let root of document.querySelectorAll('[data-scroll-x="1"]')) {
   root.style.flexWrap = 'nowrap'
-  const pseudos = [root.cloneNode(true), 
-                   root.cloneNode(true)]
+  const pseudos = [root.cloneNode(true), root.cloneNode(true)]
 
   for (let e of pseudos) e.setAttribute('class', e.getAttribute('class') + ' fixwidth')
 
@@ -84,6 +81,7 @@ for (let root of document.querySelectorAll('[data-scroll-x="1"]')) {
   root.style.display = 'block'
 
   let p = pseudos[0]
+  /* global HTMLUListElement */
   if (pseudos[0] instanceof HTMLUListElement) {
     p = document.createElement('li')
     p.setAttribute('class', 'pseudo')
@@ -133,7 +131,7 @@ if (scrolljack) {
 /* FILTER */
 const filterRoot = document.querySelector('[data-filterable="1"]#repos')
 const sel = document.createElement('select')
-if (filterRoot && window.data && ('selectedOptions' in sel)) { 
+if (filterRoot && window.data && ('selectedOptions' in sel)) {
   const header = filterRoot.querySelector('.header-row')
 
   const opt = document.createElement('option')
