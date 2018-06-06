@@ -232,6 +232,12 @@ select::-ms-expand {
   padding: 0;
 }
 
+.android.pseudo {
+  overflow-x: auto;
+  margin: 0 -12.5%;
+  padding-left: 12.5%;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;

@@ -57,11 +57,13 @@ for (let root of document.querySelectorAll('[data-scroll-x="1"]')) {
 
   for (let e of pseudos) e.setAttribute('class', e.getAttribute('class') + ' fixwidth')
 
-  pseudos[0].style.position = 'absolute'
-  pseudos[0].style.overflowX = 'visible'
-  pseudos[0].style.paddingLeft = '9999px'
-  pseudos[0].style.marginLeft = '-9999px'
-  pseudos[0].style.paddingRight = '9999px'
+  if (navigator.userAgent.toLowerCase().indexOf('android') === -1) {
+    pseudos[0].style.position = 'absolute'
+    pseudos[0].style.overflowX = 'visible'
+    pseudos[0].style.paddingLeft = '9999px'
+    pseudos[0].style.marginLeft = '-9999px'
+    pseudos[0].style.paddingRight = '9999px'
+  }
 
   // const fakeChild = document.createElement('div')
   // fakeChild.innerHTML = '&nbsp;'
@@ -84,7 +86,12 @@ for (let root of document.querySelectorAll('[data-scroll-x="1"]')) {
   /* global HTMLUListElement */
   if (pseudos[0] instanceof HTMLUListElement) {
     p = document.createElement('li')
-    p.setAttribute('class', 'pseudo')
+    if (navigator.userAgent.toLowerCase().indexOf('android') === -1) {
+      p.setAttribute('class', 'pseudo')
+    } else {
+      p.setAttribute('class', 'android pseudo')
+    }
+
     p.setAttribute('aria-hidden', true)
     p.appendChild(pseudos[0])
     for (const el of pseudos[0].querySelectorAll(['input', 'select', 'a[href]', 'textarea', 'button', '[tabindex]'])) el.tabIndex = -1
