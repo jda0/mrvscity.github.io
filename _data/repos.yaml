@@ -36,12 +36,12 @@
   private: true
   lastcommit: 4/18
 
-- title: Riven
-  url: jda0/riven2
-  lang: js
-  desc: A Flow-Mapping Tool
-  svg: riven-mark
-  lastcommit: 3/18
+# - title: Riven
+#   url: jda0/riven2
+#   lang: js
+#   desc: A Flow-Mapping Tool
+#   svg: riven-mark
+#   lastcommit: 3/18
 
 - title: Modeller
   url: jda0/comp4411-2
@@ -107,12 +107,14 @@
   lang: py
   desc: Fully-Connected Neural Networks for Vision
   svg: tensorflow-wordmark
+  private: true
   lastcommit: 12/17
 
 - title: K-Anonymity
   url: jda0/comp3632-kanon
   lang: py
   desc: Implementation of K-Anonymity
+  private: true
   lastcommit: 11/17
 
 - title: Style Transfer
@@ -120,6 +122,7 @@
   lang: py
   desc: GANs, Captioning and Style Transfer with Neural Networks
   svg: tensorflow-wordmark
+  private: true
   lastcommit: 11/17
 
 - title: Project Martini
@@ -173,7 +176,7 @@
   lastcommit: 2/15
 
 - title: Explorer
-  url: jda0/farkle
+  url: jda0/explorer
   lang: coffee
   desc: Puzzle Game
   svg: explorer-mark
