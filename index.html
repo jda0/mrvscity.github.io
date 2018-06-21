@@ -38,12 +38,13 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg?v=lkdyvepMMO" color="#0366d6">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
-
+    
     <style type="text/css">
       svg {
         display: none;
       }
     </style>
+    <link rel="stylesheet" href="assets/v2-draft.css">
   </head>
   <body>
     <header>
@@ -242,23 +243,6 @@
     <footer>
       &copy; 2018
     </footer>
-
-    <noscript id="deferred-styles">
-      <link rel="stylesheet" href="assets/v2-draft.css">
-    </noscript>
-    <script>
-      var loadDeferredStyles = function() {
-        var addStylesNode = document.getElementById("deferred-styles");
-        var replacement = document.createElement("div");
-        replacement.innerHTML = addStylesNode.textContent;
-        document.body.appendChild(replacement)
-        addStylesNode.parentElement.removeChild(addStylesNode);
-      };
-      var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-          window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-      else window.addEventListener('load', loadDeferredStyles);
-    </script>
 
     <script type="text/javascript">
       if (!window.data) window.data = {}
