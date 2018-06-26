@@ -1,9 +1,20 @@
 - div: 2018
 
 - title: Hedgehog Bot
+  url: jda0/hedgehog
+  lang: css
+  desc: An Introduction to IoT & Robotics
+  svg: hedgehog-bot
+  tag:
+    type: git-pull-request
+    title: MVSE-Outreach
+    url: mvse-outreach/arduino-hedgehog-bot/tree/gh-pages
+  lastcommit: 7/18
+
+- title: Hedgehog Bot
   url: jda0/arduino-hedgehog-bot
   lang: arduino
-  desc: An Introduction to IoT & Robotics
+  desc: New workshop: Hedgehog Clock!
   svg: hedgehog-bot
   tag:
     type: git-pull-request
