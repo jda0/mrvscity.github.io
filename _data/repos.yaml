@@ -14,7 +14,7 @@
 - title: Hedgehog Bot
   url: jda0/arduino-hedgehog-bot
   lang: arduino
-  desc: New workshop: Hedgehog Clock!
+  desc: "New workshop: Hedgehog Clock!"
   svg: hedgehog-bot
   tag:
     type: git-pull-request
