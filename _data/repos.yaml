@@ -12,7 +12,7 @@
   lastcommit: 7/18
 
 - title: Hedgehog Bot
-  url: jda0/arduino-hedgehog-bot
+  url: jda0/hedgehog-clock
   lang: arduino
   desc: "New workshop: Hedgehog Clock!"
   svg: hedgehog-bot
