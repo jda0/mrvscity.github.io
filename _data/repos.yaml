@@ -73,7 +73,7 @@
   lastcommit: 3/18
 
 - title: Hedgehog Clock
-  url: jda0/hedgehogclock
+  url: jda0/hedgehog-clock
   lang: cpp
   desc: NTP Project for Hedgehog Bot
   svg: hedgehog-clock
