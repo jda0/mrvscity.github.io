@@ -1,14 +1,14 @@
 - div: 2018
 
 - title: Hedgehog Bot
-  url: jda0/hedgehog
+  url: mvse-outreach/arduino-hedgehog-bot/tree/gh-pages
   lang: css
   desc: A redesigned home for the DIY robot used by 300+ children
   svg: hedgehog-bot
   tag:
-    type: git-merge
+    type: organization
     title: MVSE-Outreach
-    url: mvse-outreach/arduino-hedgehog-bot/tree/gh-pages
+    url: mvse-outreach
   lastcommit: 7/18
 
 - title: Hedgehog Bot
