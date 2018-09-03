@@ -48,6 +48,7 @@
   url: jda0/comp4411-4
   lang: cpp
   desc: 3D Spline-Based Animation System
+  svg: trace-mark
   private: true
   lastcommit: 4/18
 
@@ -55,6 +56,7 @@
   url: jda0/comp4411-3
   lang: cpp
   desc: A 3D Ray-Tracing Renderer
+  svg: trace-mark
   private: true
   lastcommit: 4/18
 
@@ -69,6 +71,7 @@
   url: jda0/comp4411-2
   lang: cpp
   desc: A 3D OpenGL Renderer
+  svg: trace-mark
   private: true
   lastcommit: 3/18
 
@@ -87,6 +90,7 @@
   url: jda0/comp4411-1
   lang: cpp
   desc: An Impressionist Painting Program
+  svg: impressionist-mark
   private: true
   lastcommit: 2/18
 
@@ -104,6 +108,7 @@
   lang: cpp
   desc: Buffer Overflow Implementations
   private: true
+  svg: canary-mark
   lastcommit: 12/17
 
 - title: Score
@@ -125,6 +130,7 @@
   url: jda0/comp3632-kanon
   lang: py
   desc: Implementation of K-Anonymity
+  svg: kanon-wordmark
   private: true
   lastcommit: 11/17
 
